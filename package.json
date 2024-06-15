@@ -11,16 +11,16 @@
   "scripts": {
     "start": "node scripts/watch.mjs",
     "build": "node scripts/build.mjs",
-    "dist": "yarn build && electron-builder",
-    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
-    "dist:all": "yarn run dist -wml",
-    "dist:win": "yarn run dist --win --ia32",
-    "dist:mac": "yarn run dist -m",
-    "dist:linux": "yarn run dist -l",
-    "release": "yarn dist -wml -p always",
-    "patch": "yarn version --patch",
-    "minor": "yarn version --minor",
-    "major": "yarn version --major"
+    "dist": "pnpm run build && electron-builder",
+    "dist:dir": "pnpm run dist --dir -c.compression=store -c.mac.identity=null",
+    "dist:all": "pnpm run dist -wml",
+    "dist:win": "pnpm run dist --win --ia32",
+    "dist:mac": "pnpm run dist -m",
+    "dist:linux": "pnpm run dist -l",
+    "release": "pnpm run dist -wml -p always",
+    "patch": "pnpm run version --patch",
+    "minor": "pnpm run version --minor",
+    "major": "pnpm run version --major"
   },
   "engines": {
     "node": ">=14.17.0"
